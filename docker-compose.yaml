@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  resume_backend:
+    container_name: resume
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    restart: on-failure
+    ports:
+      - '8000:8000'
+    environment:
+      - DJANGO_SETTINGS_MODULE=resume.settings
+      - PYTHONUNBUFFERED=1
+
+volumes:
+  static:
