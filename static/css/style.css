@@ -870,7 +870,8 @@ p {
 }
 
 .about_image {
-  width: 48%;
+  width: 40%;
+  background-position: 164px;
   height: 100%;
   position: absolute;
   top: 0;
